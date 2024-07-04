@@ -15,4 +15,4 @@ For each class we have 1000 examples, we can see some of them in the image below
 ## Solution Proposed
 We use transfer learning to fine tune a ResNet50 and adapt it to the task, in this case recognizing these four classes. ResNet50 is a perfect candidate for this task because it was originally trained on ImageNet, from which this subset was extracted. Applying this strategy, we almost reach a 99% accuracy, as you can see from the exaple blow.
 
-![Model Accuracy](imgs/console_example_1.jpg)
+![Model Accuracy](imgs/console_example_1.png)

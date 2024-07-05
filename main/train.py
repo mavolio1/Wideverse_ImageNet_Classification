@@ -33,9 +33,10 @@ def main():
 
     since = time.time()
     best_acc = 0.0
+    best_epoch = 0
 
     # Main training loop
-    for epoch in range(cfg.epochs):
+    for idx, epoch in enumerate(range(cfg.epochs)):
         print(f'Epoch {epoch + 1}/{cfg.epochs}')
         print('-' * 10)
 
@@ -81,7 +82,7 @@ def main():
 
     time_elapsed = time.time() - since
     print(f'Training complete in {time_elapsed // 60:.0f}m {time_elapsed % 60:.0f}s')
-    print(f'Best val Acc: {best_acc:4f}')
+    print(f'Best val Acc: {best_acc:4f} in epoch: {best_epoch}')
 
 
 if __name__ == '__main__':

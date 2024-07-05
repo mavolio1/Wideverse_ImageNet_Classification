@@ -7,7 +7,7 @@ from torchvision import transforms
 from torch.optim import lr_scheduler
 from torch.utils.data import DataLoader
 from data import dataset
-from model import custom_resnet as model
+from model import custom_net
 from config import cfg
 
 #
@@ -16,6 +16,7 @@ from config import cfg
 #
 def main():
     # Loss function, optimizer and learning rate scheduler definition
+    model = custom_net.get_model()
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.SGD(model.parameters(), lr=cfg.lr, momentum=0.9)
     scheduler = lr_scheduler.StepLR(optimizer, step_size=7, gamma=0.1)

@@ -14,7 +14,7 @@ class Custom_ResNet():
         self.model.fc = nn.Linear(self.num_ftrs, 4)
         self.model = self.model.to(cfg.device)
 
-    def Model(self):
+    def get_model(self):
         return self.model
-
-custom_resnet = Custom_ResNet().Model()
+    
+custom_net = Custom_ResNet()
